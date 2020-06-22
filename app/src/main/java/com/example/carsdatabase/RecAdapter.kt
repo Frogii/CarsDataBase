@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carsdatabase.carsDataBase.Car
 import kotlinx.android.synthetic.main.card_car.view.*
 
 class RecAdapter(val arrayList: List<Car>, val context: Context) :
     RecyclerView.Adapter<RecAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindItems(car: Car){
+        fun bindItems(car: Car) {
             itemView.tvCarName.text = "Name: ${car.name}"
             itemView.tvCarAge.text = "Age: ${car.age}"
             itemView.tvCarColor.text = "Color: ${car.color}"
-
         }
     }
 
@@ -35,5 +35,4 @@ class RecAdapter(val arrayList: List<Car>, val context: Context) :
         holder.bindItems(arrayList[position])
 
     }
-
 }

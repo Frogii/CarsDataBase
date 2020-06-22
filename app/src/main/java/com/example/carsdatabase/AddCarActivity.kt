@@ -3,6 +3,8 @@ package com.example.carsdatabase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.carsdatabase.carsDataBase.Car
+import com.example.carsdatabase.carsDataBase.Cars
 import kotlinx.android.synthetic.main.activity_add_car.*
 
 class AddCarActivity : AppCompatActivity() {
@@ -15,13 +17,16 @@ class AddCarActivity : AppCompatActivity() {
         val color = etCarColor.text
 
         btAddNewCar.setOnClickListener {
-            val i = Intent(this, MainActivity::class.java)
-            i.putExtra("name", name)
-            i.putExtra("name", age)
-            i.putExtra("name", color)
+            val car = Car()
+            car.age = age.toString().toInt()
+            car.name = name.toString()
+            car.color = color.toString()
+
+            Thread {
+                Cars.db.carDAO().saveCar(car)
+            }.start()
+
+            finish()
         }
-
-
-
     }
 }
