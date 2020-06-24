@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ListPreference
-        android:key="filter_preference_list"
-        android:title="Choose filter "
         android:entries="@array/filterName"
         android:entryValues="@array/filterNameValues"
+        android:key="filter_preference_list"
+        android:title="@string/select_filter"
+        android:shouldDisableView="true"
 
         />
 

@@ -16,12 +16,14 @@ interface Car_DAO {
     @Query("SELECT * FROM Car ORDER BY name ASC")
     fun getAllOrderByName(): List<Car>
 
-    @Query("SELECT * FROM Car ORDER BY age ASC")
-    fun getAllOrderByAge(): List<Car>
+    @Query("SELECT * FROM Car ORDER BY year ASC")
+    fun getAllOrderByYear(): List<Car>
 
     @Query("SELECT * FROM Car ORDER BY color ASC")
     fun getAllOrderByColor(): List<Car>
 
+    @Query("DELETE FROM Car")
+    fun clearAllBase()
 
 
 }

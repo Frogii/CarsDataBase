@@ -11,21 +11,23 @@
         android:id="@+id/etCarName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Car name"
+        android:textColorHint="#636363"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etCarAge"
+        android:id="@+id/etCarYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Age"
+        android:hint="Year"
+        android:textColorHint="#636363"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/etCarName"
         app:layout_constraintTop_toBottomOf="@+id/etCarName" />
@@ -37,17 +39,18 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Color"
+        android:textColorHint="#636363"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/etCarAge"
-        app:layout_constraintTop_toBottomOf="@+id/etCarAge" />
+        app:layout_constraintStart_toStartOf="@+id/etCarYear"
+        app:layout_constraintTop_toBottomOf="@+id/etCarYear" />
 
     <Button
         android:id="@+id/btAddNewCar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="#28A111"
         android:text="Add Car"
-        android:background="#7692A8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCarColor" />

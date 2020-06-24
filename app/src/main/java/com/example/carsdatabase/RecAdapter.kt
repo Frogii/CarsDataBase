@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.card_car.view.*
 class RecAdapter :
     RecyclerView.Adapter<RecAdapter.ViewHolder>() {
 
-     private var arrayList: List<Car> = arrayListOf()
+      var arrayList: List<Car> = arrayListOf()
 
     fun setCarsList(list: List<Car>){
         arrayList = list
@@ -22,8 +22,9 @@ class RecAdapter :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindItems(car: Car) {
+            // Can't add strings from res
             itemView.tvCarName.text = "Name: ${car.name}"
-            itemView.tvCarAge.text = "Age: ${car.age}"
+            itemView.tvCarYear.text = "Year: ${car.year}"
             itemView.tvCarColor.text = "Color: ${car.color}"
         }
     }

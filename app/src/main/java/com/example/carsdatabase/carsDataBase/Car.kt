@@ -11,7 +11,7 @@ class Car {
 
     var name: String = ""
 
-    var age: Int = 0
+    var year: Int = 0
 
     var color: String = ""
 

@@ -1,4 +1,4 @@
-package com.example.carsdatabase.filter
+package com.example.carsdatabase.preferenceFragment
 
 
 import android.os.Bundle
