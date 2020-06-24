@@ -26,7 +26,6 @@ class AddCarActivity : AppCompatActivity() {
                 Cars.db.carDAO().saveCar(car)
             }.start()
 
-            finish()
         }
     }
 }

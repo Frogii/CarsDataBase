@@ -3,7 +3,6 @@ package com.example.carsdatabase.carsDataBase
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.carsdatabase.carsDataBase.Car
 
 @Dao
 interface Car_DAO {
@@ -11,7 +10,18 @@ interface Car_DAO {
     @Insert
     fun saveCar(car: Car)
 
-    @Query("select * from Car")
+    @Query("SELECT * FROM Car")
     fun readCars(): List<Car>
+
+    @Query("SELECT * FROM Car ORDER BY name ASC")
+    fun getAllOrderByName(): List<Car>
+
+    @Query("SELECT * FROM Car ORDER BY age ASC")
+    fun getAllOrderByAge(): List<Car>
+
+    @Query("SELECT * FROM Car ORDER BY color ASC")
+    fun getAllOrderByColor(): List<Car>
+
+
 
 }

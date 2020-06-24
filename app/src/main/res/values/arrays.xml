@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="filterName">
+        <item>None</item>
+        <item>Name</item>
+        <item>Age</item>
+        <item>Color</item>
+    </string-array>
+
+    <string-array name="filterNameValues">
+        <item>None</item>
+        <item>Name</item>
+        <item>Age</item>
+        <item>Color</item>
+    </string-array>
+
+</resources>

@@ -8,8 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.carsdatabase.carsDataBase.Car
 import kotlinx.android.synthetic.main.card_car.view.*
 
-class RecAdapter(val arrayList: List<Car>, val context: Context) :
+
+class RecAdapter :
     RecyclerView.Adapter<RecAdapter.ViewHolder>() {
+
+     private var arrayList: List<Car> = arrayListOf()
+
+    fun setCarsList(list: List<Car>){
+        arrayList = list
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
